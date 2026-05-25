@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* 2. Barra De Navegación (Header) */
+.header {
+    background-color: #0b1329; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 10%;
+    border-bottom: 1px 0 0 rgba(0, 0, 0, 2);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover, .nav a.active {
+    color: #fff;
+}
+
+/* Línea Sutil Debajo Del Enlace Activo*/
+.nav a.active {
+    border-bottom: 3px solid #fff;
+    padding-bottom: 5px;
+}
+
+/* 3. CONTENEDOR PRINCIPAL */
+.contenedor-principal {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+/* 4. Estilos Para El Perfil */
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.perfil-foto {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.perfil-foto img {
+    width: 280px;            
+    height: 280px;           
+    object-fit: cover;       
+    border-radius: 50%;     
+    border: 3px solid #f6f3c5; 
+    box-shadow: 0 8px 25px rgba(62, 248, 233, 0.3);
+}
+
+.perfil-texto {
+    flex: 2;
+}
+
+.perfil-texto h1 {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+.perfil-texto h2 {
+    font-size: 1.3rem;
+    color: #000000;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.perfil-texto p {
+    color: #000000;
+    font-size: 1.1rem;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--color-acento), transparent);
+    margin: 3rem 0;
+}
+
+/* 5. Sección De Hobbies e Intereses */
+.hobbies h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.hobbie-tarjeta {
+    background-color: var(--fondo-tarjetas);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.hobbie-tarjeta:hover {
+    transform: translateY(-5px); 
+    border-color: #000000;
+}
+
+.hobbie-tarjeta h4 {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+.hobbie-tarjeta p {
+    color: #000000;
+    font-size: 0.95rem;
+}
+
+/* 6. Pie De Pagína (Footer) */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    background-color: #0b1329;
+    color: #fff;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(136, 33, 33, 0.05);
+}
+
+
+/* 7. Formulario De Contacto */
+.seccion-contacto {
+    background-color: #ffffff; 
+    padding: 2.5rem;
+    border-radius: 15px;
+    max-width: 650px;          
+    margin: 3rem auto;         
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;               
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;               
+}
+
+.grupo-input label {
+    font-size: 1.1rem;
+    color: #000000;            
+    font-weight: bold;         
+}
+
+/* Bordes De Las Cajas Donde Se Escribe */
+.grupo-input input,
+.grupo-input textarea {
+    background-color: #ffffff; 
+    border:1px solid #555555; 
+    color: #333333;            
+    padding: 0.9rem 1rem;      
+    border-radius: 8px;        
+    font-size: 1.1rem;
+    outline: none;             
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto Al Hacer Clic Para Escribir */
+.grupo-input input:focus,
+.grupo-input textarea:focus {
+    border-color: #6c67ec;
+}
+
+.grupo-input textarea {
+    resize: vertical;          
+}
+
+/* Botón De Enviar */
+.btn-enviar {
+    background-color: transparent;
+    color: #3f5bfb;            
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    align-self: center;        
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-enviar:hover {
+    color: #031996; 
+    transform: scale(1.05);    
+}
